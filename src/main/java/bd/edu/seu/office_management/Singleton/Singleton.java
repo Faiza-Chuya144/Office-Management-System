@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Singleton {
     private static final String DB_HOST = "localhost";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "@cse61";
+    private static final String DB_PASSWORD = "(Enter your password)";
     private static final String DB_NAME = "oms";
     private static final String DB_URL = "jdbc:mysql://" + DB_HOST + "/" + DB_NAME ;
     private static Connection connection ;
@@ -26,3 +26,4 @@ public class Singleton {
         return connection;
     }
 }
+
