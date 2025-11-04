@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #cfc7de;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.office_management.Controller.AdminDashboardController">
+   <children>
+      <Pane prefHeight="606.0" prefWidth="235.0" style="-fx-background-color: #272976;">
+         <children>
+            <Label layoutX="42.0" layoutY="88.0" text="DASHBOARD" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="158.0" text="ADMIN" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="215.0" onMouseClicked="#add_employee" text="Employee Information" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="255.0" onMouseClicked="#task_details" text="Task Details" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="293.0" onMouseClicked="#task_assign" text="Assign Task To Employee" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="336.0" onMouseClicked="#employee_attendance" text="Employee Attendance" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="371.0" onMouseClicked="#budget_calculation" text="Budget Calculation" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="416.0" onMouseClicked="#logout" text="Logout" textFill="AZURE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="-5.0" prefHeight="73.0" prefWidth="241.0" style="-fx-background-color: #4f509e;" text="   SofTech">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5741325101641828" startX="0.7444795163271932" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.8641975522041321" blue="0.8641975522041321" opacity="0.3100000023841858" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9473684430122375" green="0.9269005656242371" blue="0.9269005656242371" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="281.0" layoutY="50.0" text="Username :">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameField" layoutX="400.0" layoutY="52.0" prefHeight="25.0" prefWidth="150.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="profitChart" layoutX="235.0" layoutY="222.0" prefHeight="370.0" prefWidth="565.0">
+         <xAxis>
+            <CategoryAxis fx:id="xAxis" side="BOTTOM" label="Months" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" side="LEFT" label="Profit (USD)" />
+         </yAxis>
+      </BarChart>
+      <Label layoutX="400.0" layoutY="184.0" text="Profit of Last 12 Month">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

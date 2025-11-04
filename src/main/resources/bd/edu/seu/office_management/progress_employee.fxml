@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.office_management.Controller.ProgressEmployeeController">
+   <children>
+      <TableView fx:id="progressTable" layoutX="16.0" layoutY="160.0" onMouseClicked="#select" prefHeight="180.0" prefWidth="769.0" style="-fx-background-color: #e4e0f3;">
+         <columns>
+            <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="taskColumn" prefWidth="166.4444580078125" text="Task Completed" />
+            <TableColumn fx:id="challengesColumn" prefWidth="128.22225952148438" text="Challenges" />
+            <TableColumn fx:id="skillUtilizeColumn" prefWidth="138.44439697265625" text="Skills Utilized" />
+            <TableColumn fx:id="nextStepColumn" prefWidth="139.55557250976562" text="Next Steps" />
+            <TableColumn fx:id="rateColumn" prefWidth="122.2222900390625" text="Rate Yourself" />
+         </columns>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="0.8796296119689941" blue="0.8796296119689941" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <TextField fx:id="dateField" layoutX="16.0" layoutY="24.0" prefHeight="25.0" prefWidth="388.0" promptText="Date" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.49347785115242004" green="0.45500001311302185" blue="0.9100000262260437" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="rateField" layoutX="408.0" layoutY="85.0" prefHeight="25.0" prefWidth="376.0" promptText="Rate Yourself" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.08799999952316284" green="0.8799999952316284" blue="0.7946045994758606" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="skillUtilizedField" layoutX="409.0" layoutY="24.0" prefHeight="25.0" prefWidth="373.0" promptText="Skills Utilized" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.16529999673366547" green="0.2219143807888031" blue="0.8700000047683716" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="taskField" layoutX="16.0" layoutY="54.0" prefHeight="25.0" prefWidth="304.0" promptText="Task Completed" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7400000095367432" green="0.44486045837402344" blue="0.17020000517368317" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="challengesField" layoutX="16.0" layoutY="84.0" prefHeight="25.0" prefWidth="386.0" promptText="Challenges" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8583509922027588" green="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="nextStepField" layoutX="323.0" layoutY="55.0" prefHeight="25.0" prefWidth="460.0" promptText="Next Steps" style="-fx-background-color: #f0eff5;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.3700000047683716" green="0.8042072057723999" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Button layoutX="16.0" layoutY="121.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="769.0" style="-fx-background-color: #a0a0a0;" text="Save">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.5027483105659485" blue="0.8199999928474426" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Label layoutX="16.0" layoutY="362.0" text="Date                       :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="400.0" text="Task Completed    :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="437.0" text="Challenges             :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="474.0" text="Skills Utilized         :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="508.0" text="Next Steps             :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="544.0" text="Rate                       :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="DateLabel" layoutX="175.0" layoutY="370.0" prefHeight="20.0" prefWidth="205.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="taskLabel" layoutX="175.0" layoutY="407.0" prefHeight="20.0" prefWidth="210.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="challengesLabel" layoutX="175.0" layoutY="442.0" prefHeight="20.0" prefWidth="210.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="skillsLabel" layoutX="176.0" layoutY="481.0" prefHeight="20.0" prefWidth="204.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nextLabel" layoutX="175.0" layoutY="513.0" prefHeight="20.0" prefWidth="208.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="rateLabel" layoutX="173.0" layoutY="549.0" prefHeight="20.0" prefWidth="206.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dateSelect" layoutX="393.0" layoutY="367.0" prefHeight="25.0" prefWidth="315.0" promptText="Date" />
+      <TextField fx:id="taskSelect" layoutX="394.0" layoutY="402.0" prefHeight="25.0" prefWidth="311.0" promptText="Task Completed" />
+      <TextField fx:id="challengesSelect" layoutX="394.0" layoutY="439.0" prefHeight="25.0" prefWidth="311.0" promptText="Challenges" />
+      <TextField fx:id="skillsSelect" layoutX="395.0" layoutY="476.0" prefHeight="25.0" prefWidth="311.0" promptText="Skills Utilized" />
+      <TextField fx:id="nextSelect" layoutX="396.0" layoutY="510.0" prefHeight="25.0" prefWidth="310.0" promptText="Next Steps" />
+      <TextField fx:id="rateSelect" layoutX="396.0" layoutY="546.0" prefHeight="25.0" prefWidth="310.0" promptText="Rate" />
+      <Separator layoutX="386.0" layoutY="367.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Button layoutX="708.0" layoutY="367.0" mnemonicParsing="false" onAction="#update" prefHeight="42.0" prefWidth="87.0" text="Update" />
+      <Button layoutX="708.0" layoutY="411.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="87.0" text="Delete" />
+      <Button layoutX="709.0" layoutY="488.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="84.0" text="Back" />
+      <Button layoutX="709.0" layoutY="531.0" mnemonicParsing="false" onAction="#home" prefHeight="40.0" prefWidth="84.0" text="Home" />
+   </children>
+</AnchorPane>

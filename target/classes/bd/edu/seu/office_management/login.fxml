@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.office_management.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="446.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../Image/official-login.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_CENTER" layoutX="456.0" layoutY="33.0" prefHeight="33.0" prefWidth="255.0" text="LogIn">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="456.0" layoutY="150.0" prefHeight="33.0" prefWidth="255.0" />
+      <Label layoutX="456.0" layoutY="119.0" prefHeight="18.0" prefWidth="148.0" text="Username:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <PasswordField fx:id="passField" layoutX="456.0" layoutY="229.0" prefHeight="33.0" prefWidth="255.0" />
+      <Label layoutX="456.0" layoutY="204.0" prefHeight="18.0" prefWidth="148.0" text="Password:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <Button layoutX="504.0" layoutY="384.0" mnemonicParsing="false" onAction="#logIn" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: #ADC2FF;" text="LogIn">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="476.0" layoutY="495.0" prefHeight="11.0" prefWidth="148.0" text="Don't have an account?" />
+      <Label layoutX="604.0" layoutY="495.0" onMouseClicked="#register" prefHeight="18.0" prefWidth="84.0" text="Register Here" textFill="#380dd4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ChoiceBox fx:id="typeField" layoutX="456.0" layoutY="314.0" prefHeight="39.0" prefWidth="255.0" />
+      <Label layoutX="456.0" layoutY="282.0" prefHeight="18.0" prefWidth="148.0" text="Type:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

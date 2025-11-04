@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F4E9F3;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.office_management.Controller.TaskAssignController">
+   <children>
+      <Label layoutX="258.0" layoutY="44.0" text="Assign Task To Employee">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="employeeNameField" layoutX="109.0" layoutY="126.0" prefHeight="25.0" prefWidth="134.0" />
+      <Label layoutX="10.0" layoutY="128.0" text="Assigned To :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="164.0" text="Task Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="taskNameField" layoutX="109.0" layoutY="162.0" prefHeight="25.0" prefWidth="134.0" />
+      <Label layoutX="18.0" layoutY="280.0" text="Status :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="203.0" text="Assign Date:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="239.0" text="Due Date :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="assignDateField" layoutX="106.0" layoutY="201.0" prefHeight="25.0" prefWidth="123.0" />
+      <DatePicker fx:id="dueDateField" layoutX="106.0" layoutY="237.0" prefHeight="25.0" prefWidth="123.0" />
+      <RadioButton layoutX="92.0" layoutY="281.0" mnemonicParsing="false" text="Completed">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="statusToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="91.0" layoutY="313.0" mnemonicParsing="false" text="In Progress" toggleGroup="$statusToggle">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="92.0" layoutY="340.0" mnemonicParsing="false" text="On Hold" toggleGroup="$statusToggle">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <TableView fx:id="taskAssignTable" layoutX="267.0" layoutY="149.0" prefHeight="200.0" prefWidth="519.0">
+         <columns>
+            <TableColumn fx:id="employeeNameCol" prefWidth="88.0" text="Assigned To" />
+            <TableColumn fx:id="taskNameCol" prefWidth="144.0" text="Task Name" />
+            <TableColumn fx:id="statusCol" prefWidth="97.0" text="Assign Date" />
+            <TableColumn fx:id="assignDateCol" prefWidth="89.0" text="Due Date" />
+            <TableColumn fx:id="dueDateCol" prefWidth="100.0" text="Status" />
+         </columns>
+      </TableView>
+      <ToolBar fx:id="toolbar" layoutX="258.0" layoutY="421.0" prefHeight="40.0" prefWidth="337.0">
+         <items>
+            <Button fx:id="save" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="61.0" text="Save" />
+            <Button fx:id="update" mnemonicParsing="false" onAction="#update" text="Update" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" text="Delete" />
+            <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="65.0" text="Clear" />
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="70.0" text="Exit" />
+         </items>
+      </ToolBar>
+      <Button fx:id="exit1" layoutX="658.0" layoutY="495.0" mnemonicParsing="false" onAction="#exit1" prefHeight="25.0" prefWidth="65.0" text="Exit" />
+   </children>
+</AnchorPane>

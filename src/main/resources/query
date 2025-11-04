@@ -1,0 +1,7 @@
+create table user(name varchar(50), password varchar(50), type varchar(50));
+create table taskAssign(employeeName varchar(100), taskName varchar(100), assignDate date, dueDate date, status varchar(50));
+CREATE TABLE budgetCalculation (item VARCHAR(255),cost DOUBLE,total_income DOUBLE,total_expense DOUBLE, final_balance DOUBLE);
+create table employee_attendance(Name varchar(50),ID varchar(50),Attendance varchar(50));
+create table employee_progress(date varchar(50),task_completed varchar(50),challanges varchar(50),skill_utilized varchar(50),next_steps varchar(50),rate varchar(50));
+create table addEmployee(id varchar(10), name varchar(50), birth varchar(50), phone varchar(11), address varchar(50), gender varchar(10));
+create table task(taskNo varchar(100), taskName varchar(100), taskCost  double, taskFrom varchar(100), dueDate varchar(100));

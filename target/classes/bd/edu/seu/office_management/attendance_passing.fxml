@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #aaa6cc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.office_management.Controller.AttendancePassingController">
+   <children>
+      <TableView fx:id="attendanceTable" layoutX="147.0" layoutY="167.0" prefHeight="267.0" prefWidth="538.0" style="-fx-background-color: #cfc7de;">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="193.0" text="Name" />
+          <TableColumn fx:id="idColumn" prefWidth="153.0" text="ID" />
+            <TableColumn fx:id="attendanceColumn" prefWidth="191.0" text="Attendance" />
+        </columns>
+      </TableView>
+      <Label layoutX="270.0" layoutY="59.0" text="Employee Attendance">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="659.0" layoutY="501.0" mnemonicParsing="false" onAction="#exit" prefHeight="31.0" prefWidth="67.0" text="Exit">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
